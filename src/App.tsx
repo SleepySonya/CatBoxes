@@ -1,7 +1,5 @@
 import { useEffect, useRef, useState } from "react";
 
-
-
 function App() {
   const [count, setCount] = useState(1 as number);
   const possibleLocations = useRef(new Set() as Set<number>);
@@ -41,7 +39,10 @@ function App() {
 
   return (
     <div className="w-full h-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 flex flex-col justify-center items-center font-mono">
-      <h1 className="text-6xl">Try to catch a cat</h1>
+      <h1 className="text-6xl">
+        Try to catch a cat 
+        <img src="meow_box.png" className="inline w-16 ml-8" />
+      </h1>
       <div className="flex gap-24 flex-row mt-16 ">
         <button
           className="text-4xl w-40 text-center"
@@ -64,9 +65,11 @@ function App() {
             <button className="text-2xl" key={i} onClick={() => handleBox(i)}>
             <img src="box-test.svg" className="w-12 h-12"/>{i + 1}
             </button>
-            
           </div>
         ))}
+      </div>
+      <div className="sticky top-[95vh]">
+        <p>Made with &hearts; by <a href="https://github.com/newclarityex">Kira</a> and <a href="https://github.com/SleepySonya">Sonya</a>. Boxes by <a href="https://discord.com/users/189110347943116800">Purple</a>.</p>
       </div>
     </div>
   );
